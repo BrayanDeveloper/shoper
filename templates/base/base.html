@@ -32,7 +32,7 @@
         <a class="nav-link" href="/bonos">Bonos <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">Viajes</a>
+        <a class="nav-link" href="/viajes">Viajes</a>
       </li>
       <!--<li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -49,6 +49,7 @@
         <a class="nav-link" href="/aliados">Aliados</a>
       </li>
     </ul>
+    <a class="nav-link btn btn-info" href="/admin">Admin</a>
     <!--<form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -66,7 +67,16 @@
 	{% endblock %}
 
 	{% block footer %}
-	<h5>Footer</h5>
+	<div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        copyright
+      </div>
+      <div class="col-sm-6">
+        Footer
+      </div>
+    </div>
+  </div>
 	{% endblock %}
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -11,11 +11,6 @@ class Vuelo(models.Model):
 	numero_adultos = models.IntegerField(choices=numeroAdulto, default=1)
 	numeroNinos = ((1,'1'),(2,'2'),(1,'1'),(3,'3'),(4,'4'),(5,'5'),(6,'6'),(7,'7'))
 	numero_ninos = models.IntegerField(choices=numeroNinos, default=1)
-	tipo = (('cualquiera','cualquiera'),('economica','economica'),('ejecutiva','ejecutiva'),('primera_clase','primera clase'))
-	tipo_cabina = models.CharField(choices=tipo, default=1, max_length=40)
-	aerolinea = models.CharField(max_length=30)
-	hora_salida = models.TimeField(blank=True)
-	hora_regreso = models.TimeField(blank=True)
 	fecha_vuelo = models.DateField(default=datetime.date.today)
 
 class Plan(models.Model):
