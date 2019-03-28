@@ -1,0 +1,32 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+{% block title %}
+puntos
+{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<img src="{% static 'img/bonos.jpg' %}" width="100%" height="600px" alt=""><br>
+			<h1 style="text-align: center; background-color: mediumseagreen;"><legend>Bonos</legend></h1>
+			
+		</div>
+	</div>
+	<div class="row">
+		{% for bono in bonos %}
+		<div class="col-sm-4">
+			<div class="card" style="width: 18rem;">
+				  <img class="card-img-top" src="/{{ bono.imagen }}" alt="Card image cap" width="100%" height="200px">
+				  <div class="card-body">
+				    <h5 class="card-title">{{ bono.nombre }}</h5>
+				    <p class="card-text">{{ bono.descripcion }}</p>
+				    <i href="#" class="btn btn-primary">Puntos: {{ bono.puntos }}</i><br>
+				    <i style="color: dodgerblue;">{{ bono.fecha_bono }}</i>
+				  </div>
+				</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+{% endblock %}
+

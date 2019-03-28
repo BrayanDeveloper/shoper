@@ -5,7 +5,7 @@ import datetime
 class Vuelo(models.Model):
 	desde = models.CharField(max_length=30)
 	hasta = models.CharField(max_length=30)
-	cuendo_viaja = models.CharField(max_length=30)
+	cuando_viaja = models.CharField(max_length=30)
 	cuando_vuelve = models.CharField(max_length=999)
 	numeroAdulto = ((1,'1'),(2,'2'),(1,'1'),(3,'3'),(4,'4'),(5,'5'),(6,'6'),(7,'7'))
 	numero_adultos = models.IntegerField(choices=numeroAdulto, default=1)
@@ -21,8 +21,8 @@ class Vuelo(models.Model):
 class Plan(models.Model):
 	desde = models.CharField(max_length=30)
 	hasta = models.CharField(max_length=30)
-	cuendo_viaja = models.CharField(max_length=30)
-	cuando_vuelve = models.CharField(max_length=999)
+	cuando_viaja = models.DateField(default=datetime.date.today)
+	cuando_vuelve = models.DateField(default=datetime.date.today)
 	numeroHab = ((1,'1'),(2,'2'),(3,'3'),(4,'4'),(5,'5'),(6,'6'),(7,'7'))
 	numero_habitaciones = models.IntegerField(choices=numeroHab, default=1)
 	numeroAdulto = ((1,'1'),(2,'2'),(3,'3'),(4,'4'),(5,'5'),(6,'6'),(7,'7'))
@@ -36,7 +36,7 @@ class Plan(models.Model):
 class Hotel(models.Model):
 	donde = models.CharField(max_length=30)
 	cuando_llegas = models.CharField(max_length=30)
-	cuendo_sales = models.CharField(max_length=30)
+	cuando_sales = models.CharField(max_length=30)
 	numeroHab = ((1,'1'),(2,'2'),(1,'1'),(3,'3'),(4,'4'),(5,'5'),(6,'6'),(7,'7'))
 	numero_habitaciones = models.IntegerField(choices=numeroHab, default=1)
 	numeroAdulto = ((1,'1'),(2,'2'),(1,'1'),(3,'3'),(4,'4'),(5,'5'),(6,'6'),(7,'7'))

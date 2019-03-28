@@ -16,6 +16,9 @@ class Usuario(models.Model):
 	estado_civil = models.CharField(max_length=30)
 	ocupacion = models.CharField(max_length=30)
 
+	def __str__(self):
+		return 'Nombre: ' + self.nombre + ' Doc: ' + self.documento
+
 class Notificacion(models.Model):
 	correo_electronico = models.BooleanField()
 	mensaje_texto = models.BooleanField()

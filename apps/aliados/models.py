@@ -9,6 +9,6 @@ class Aliado(models.Model):
 	thumbnail.allow_tags = True
 
 	nombre = models.CharField(max_length=30)
-	imagen = models.ImageField(upload_to='photos')
+	imagen = models.ImageField(upload_to='static/img')
 	descripcion = models.CharField(max_length=30)
 	fecha_aliado = models.DateField(default=datetime.date.today)
