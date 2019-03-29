@@ -7,14 +7,14 @@ puntos
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<img src="{% static 'img/aliados.jpeg' %}" width="100%" height="600px" alt=""><br>
+			<!--<img src="{% static 'img/aliados.jpeg' %}" width="100%" height="600px" alt=""><br>-->
 			<h1 style="text-align: center; background-color: mediumseagreen;"><legend>Aliados</legend></h1>
 			
 		</div>
 	</div>
 	<div class="row">
 		{% for aliado in aliados %}
-		<div class="col-sm-4">
+		<div class="col-sm-4 col-md-4 col-xs-4">
 			<div class="card" style="width: 18rem;">
 				  <img class="card-img-top" src="/{{ aliado.imagen }}" alt="Card image cap" width="100%" height="200px">
 				  <div class="card-body">
