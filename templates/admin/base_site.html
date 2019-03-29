@@ -1,0 +1,12 @@
+
+{% extends "admin/base.html" %}
+{% load staticfiles %}
+
+{% block title %} Administracion{% endblock %}
+
+{% block branding %}
+
+<h1 id="site-name" style="font-size: 20px;"><a href="{% url 'admin:index' %}"><img src="{% static 'img/paisaje.png' %}" alt="" width="40">admin Puntos</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
